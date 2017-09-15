@@ -22,7 +22,7 @@ function alertIMC(){
                     alert("Seu IMC: "+imc+"\nAcima do peso ideal");
                 }
                 else if(imc>31.1){
-                    alert("Seu IMC: "+imc+"\nObeso");
+                    alert("Seu IMC: "+imc+"\nObeso\nProcure orientação médica imediatamente!");
                 }
                 
             }
@@ -40,7 +40,7 @@ function alertIMC(){
                     alert("Seu IMC: "+imc+"\nAcima do peso ideal");
                 }
                 else if(imc>32.3){
-                    alert("Seu IMC: "+imc+"\nObeso");
+                    alert("Seu IMC: "+imc+"\nObeso\nProcure orientação médica imediatamente!");
                 }
             }
 }

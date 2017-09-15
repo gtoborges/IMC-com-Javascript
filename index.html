@@ -10,7 +10,7 @@
             
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-       <script href="script.js" type="truetype"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
         <link rel="stylesheet" href="style.css">
 
@@ -18,29 +18,48 @@
 
     <body>
 
-       <form id="formulario">
-            <div class="form-group">
-                <h1>Cálculo IMC</h1>
+	    <div class="container">
+	       <form id="formulario">
+	            <div class="form-group">
 
-                <div class="input-group input-group-lg">
-                    <span class="input-group-addon" id="sizing-addon1">Peso</span>
-                    <input class="form-control" type="number" value="peso" min="0.1" max="250" step="0.1" name="peso" placeholder="Kg" required aria-describedby="sizing-addon1">
-                </div>
-                <!--Peso: <input class="form-control" type="number" value="peso" min="0.1" max="250" step="0.1" name="peso" placeholder="Quilogramas" required><br>-->
+	            	<div id="titulo">
+	                	<h1>Cálculo IMC</h1>
+	                </div>
 
-                <div class="input-group input-group-lg">
-                    <span class="input-group-addon" id="sizing-addon1">Altura</span>
-                    <input class="form-control" type="number" value="altura" min="0.01" max="2.50" step="0.1" name="altura" placeholder="Metros" required aria-describedby="sizing-addon1">
-                </div>
-                <!--Altura: <input type="number" value="altura" step="0.01" min= "0.1" max="2.50" name="altura" placeholder="Metros" required><br>-->
-                
-                Sexo:
-                <input type="radio" name="sexo" value="masculino" required>Masculino
-                <input type="radio" name="sexo" value="feminino" required>Feminino<br>
+	                <div class="input-group input-group-lg" id="dados">
+	                    <span class="input-group-addon" id="sizing-addon1">Peso</span>
+	                    <input class="form-control" type="number" value="peso" min="0.1" max="250" step="0.1" name="peso" placeholder="Kg" aria-describedby="sizing-addon1" required="required">
+	                </div>
+	                <!--Peso: <input class="form-control" type="number" value="peso" min="0.1" max="250" step="0.1" name="peso" placeholder="Quilogramas" required><br>-->
 
-                <input class="btn btn-primary" type="submit" value="Submit" onclick="alertIMC();">
-            </div>
-       </form>
+	                <div class="input-group input-group-lg" id="dados">
+	                    <span class="input-group-addon" id="sizing-addon1">Altura</span>
+	                    <input class="form-control" type="number" value="altura" min="0.01" max="2.50" step="0.01" name="altura" placeholder="Metros" aria-describedby="sizing-addon1" required="required">
+	                </div>
+	                <!--Altura: <input type="number" value="altura" step="0.01" min= "0.1" max="2.50" name="altura" placeholder="Metros" required><br>-->
+	                
+	                <!-- <div class="container" id="main">
+		                <input type="radio" name="sexo" id= "Masculino" value="masculino" required>
+		                <label for="masculino">Masculino</label>
+		                <input type="radio" name="sexo" id="feminino" value="feminino" required>
+		                <label for="feminino">Feminino</label>
+					</div> -->
+
+					<div class="input-group" id="radio">
+				      <span class="input-group-addon">
+				        <input type="radio" name="sexo" id= "Masculino" value="masculino" required>
+				      </span>
+				      <label for="masculino" class="form-control" aria-label="Text input with radio button">Masculino</label>
+				      <span class="input-group-addon">
+				        <input type="radio" name="sexo" id= "Masculino" value="feminino" required>
+				      </span>
+				      <label for="masculino" class="form-control" aria-label="Text input with radio button">Feminino</label>
+				    </div>
+
+	                <input class="btn btn-primary" type="submit" value="Submit" onclick="alertIMC();">
+	            </div>
+	       </form>
+	    </div>
 
        <script src=script.js>
             function alertIMC();
