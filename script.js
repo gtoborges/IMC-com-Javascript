@@ -1,12 +1,9 @@
 function alertIMC(){
             var formulario = document.getElementById("formulario");
 
-            var peso = formulario.peso.value;
-            var altura = formulario.altura.value;
-            var sexo = formulario.sexo.value;
-
-            
-            var imc = peso/(altura*altura);
+            var {peso, altura, sexo} = formulario
+                      
+            var imc = peso.value/(altura.value*altura.value);
             
             if(sexo = "masculino"){
                 if(imc<=20.7){
